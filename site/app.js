@@ -291,7 +291,7 @@ function renderTable(items) {
   if (!items.length) {
     elements.recordsTable.innerHTML = `
       <tr>
-        <td colspan="10">No records match the current filters.</td>
+        <td colspan="11">No records match the current filters.</td>
       </tr>
     `;
     return;
@@ -302,7 +302,10 @@ function renderTable(items) {
       (record) => `
         <tr>
           <td>
-            <a class="record-link" href="${record.imageFile}">${record.recordId}</a>
+            ${record.recordId}
+          </td>
+          <td>
+            <a class="record-link" href="${record.imageFile}">open</a>
           </td>
           <td>${record.site}</td>
           <td>${record.groupName}</td>
