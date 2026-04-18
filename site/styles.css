@@ -272,6 +272,40 @@ table {
   min-width: 980px;
 }
 
+.col-record {
+  width: 18ch;
+}
+
+.col-sheet {
+  width: 7ch;
+}
+
+.col-site,
+.col-group {
+  width: 10ch;
+}
+
+.col-chip {
+  width: 18ch;
+}
+
+.col-collar {
+  width: 14ch;
+}
+
+.col-sex,
+.col-age {
+  width: 6ch;
+}
+
+.col-weight {
+  width: 10ch;
+}
+
+.col-quality {
+  width: 12ch;
+}
+
 th,
 td {
   padding: 14px 16px;
@@ -298,6 +332,18 @@ tbody tr:hover {
   color: var(--accent-deep);
   font-weight: 700;
   text-decoration: none;
+}
+
+td:nth-child(1),
+td:nth-child(2),
+td:nth-child(3),
+td:nth-child(4),
+td:nth-child(5),
+td:nth-child(7),
+td:nth-child(8),
+td:nth-child(9),
+td:nth-child(10) {
+  white-space: nowrap;
 }
 
 .pill {
@@ -329,6 +375,7 @@ tbody tr:hover {
 .notes-cell {
   min-width: 280px;
   color: var(--muted);
+  white-space: normal;
 }
 
 .missing {
