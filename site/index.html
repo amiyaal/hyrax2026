@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ein Gedi 2026 Hyrax Trapping Dashboard</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Ein Gedi Field Season 2026</p>
+          <h1>Hyrax Trapping Dashboard</h1>
+          <p class="lede">
+            A cleaned table and offline dashboard built from photographed
+            trapping sheets. The site highlights core counts, sex and age
+            structure, site composition, and weight/body-size distributions.
+          </p>
+        </div>
+        <div class="hero-note">
+          <h2>Data handling</h2>
+          <p>
+            The original sheets are handwritten on a 2017 template. I treated
+            the season as <strong>2026</strong>, matching your folder and the
+            handwritten year correction. Unclear fields are marked as unknown or
+            flagged in the notes column rather than guessed.
+          </p>
+        </div>
+      </header>
+
+      <main>
+        <section class="summary-grid" id="summary-grid"></section>
+
+        <section class="panel filter-panel">
+          <div>
+            <p class="section-label">Filter Records</p>
+            <h2>Slice the season</h2>
+          </div>
+          <div class="filters" id="filters"></div>
+        </section>
+
+        <section class="chart-grid">
+          <article class="panel">
+            <p class="section-label">Composition</p>
+            <h2>Sex distribution</h2>
+            <div id="sex-chart" class="chart-stack"></div>
+          </article>
+          <article class="panel">
+            <p class="section-label">Composition</p>
+            <h2>Age distribution</h2>
+            <div id="age-chart" class="chart-stack"></div>
+          </article>
+          <article class="panel wide">
+            <p class="section-label">Spatial</p>
+            <h2>Records by site</h2>
+            <div id="site-chart" class="chart-stack"></div>
+          </article>
+          <article class="panel wide">
+            <p class="section-label">Timeline</p>
+            <h2>Cumulative trapped hyraxes</h2>
+            <div id="cumulative-chart" class="line-chart"></div>
+          </article>
+        </section>
+
+        <section class="chart-grid">
+          <article class="panel wide">
+            <p class="section-label">Morphometrics</p>
+            <h2>Weight distribution</h2>
+            <div id="weight-chart" class="histogram"></div>
+          </article>
+          <article class="panel">
+            <p class="section-label">Morphometrics</p>
+            <h2>Average weight by sex</h2>
+            <div id="weight-by-sex-chart" class="chart-stack"></div>
+          </article>
+          <article class="panel">
+            <p class="section-label">Morphometrics</p>
+            <h2>Average body length by age</h2>
+            <div id="length-by-age-chart" class="chart-stack"></div>
+          </article>
+        </section>
+
+        <section class="panel">
+          <div class="table-header">
+            <div>
+              <p class="section-label">Records</p>
+              <h2>Cleaned trapping table</h2>
+            </div>
+            <p id="table-count" class="table-count"></p>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Record</th>
+                  <th>Site</th>
+                  <th>Group</th>
+                  <th>Chip</th>
+                  <th>Collar</th>
+                  <th>Sex</th>
+                  <th>Age</th>
+                  <th>Weight (kg)</th>
+                  <th>Quality</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody id="records-table"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
